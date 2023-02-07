@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Documents/GitHub/Shop_App/app/src/main/res/drawable/ic_hoa4.xml" value="0.2085" />
+        <entry key="..\:/Documents/GitHub/Shop_App/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Documents/GitHub/Shop_App/app/src/main/res/layout/item_danhmuc_home.xml" value="0.25" />
+        <entry key="..\:/Documents/GitHub/Shop_App/app/src/main/res/layout/toolbar.xml" value="0.25" />
         <entry key="..\:/Users/TGDD/AndroidStudioProjects/Shop_App/app/src/main/res/drawable/ic_frame_223.xml" value="0.2085" />
         <entry key="..\:/Users/TGDD/AndroidStudioProjects/Shop_App/app/src/main/res/drawable/ic_hoa1.xml" value="0.2085" />
         <entry key="..\:/Users/TGDD/AndroidStudioProjects/Shop_App/app/src/main/res/drawable/ic_hoa4.xml" value="0.2085" />

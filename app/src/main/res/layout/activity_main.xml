@@ -10,14 +10,15 @@
     <include layout="@layout/toolbar"></include>
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:src="@drawable/slide"
+        android:src="@drawable/slide1"
         android:layout_margin="@dimen/dp10"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp200"/>
 
     <LinearLayout
+
         android:layout_width="match_parent"
-        android:layout_height="121dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
@@ -27,15 +28,33 @@
             android:text="Product Categoies" />
 
         <androidx.recyclerview.widget.RecyclerView
-
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp10"
             android:layout_marginTop="@dimen/dp20"
             android:layout_marginEnd="@dimen/dp10"
-            tools:listitem="@layout/item_danhmuc_home"
-            tools:itemCount="5"/>
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            tools:itemCount="5"
+            tools:listitem="@layout/item_danhmuc_home" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:text="Popular Products"
+            style="@style/TextViewBase"/>
+        <TextView
+            android:textColor="@color/color_app"
+            android:gravity="end"
+            android:text="ViewAll"
+            style="@style/TextViewBase"/>
     </LinearLayout>
 
 
