@@ -4,19 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include layout="@layout/toolbar"></include>
+
     <androidx.appcompat.widget.AppCompatImageView
-        android:src="@drawable/ic_hoa1"
-        android:layout_width="@dimen/dp100"
-        android:layout_height="@dimen/dp100"/>
+        android:src="@drawable/slide"
+        android:layout_margin="@dimen/dp10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp200"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="121dp"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextViewBase"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="Product Categoies" />
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp10"
+            tools:listitem="@layout/item_danhmuc_home"
+            tools:itemCount="5"/>
+    </LinearLayout>
+
 
 </LinearLayout>

@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Shop_App" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Shop_App" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -12,5 +12,19 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="TextViewBase">
+        <item name="android:fontFamily">@font/readex</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/rgb_033544</item>
+        <item name="android:textSize">@dimen/sp16</item>
+    </style>
+    <style name="IconImageViewBase">
+        <item name="android:layout_height">@dimen/dp48</item>
+        <item name="android:layout_width">@dimen/dp48</item>
+        <item name="android:padding">@dimen/dp12</item>
+
     </style>
 </resources>
