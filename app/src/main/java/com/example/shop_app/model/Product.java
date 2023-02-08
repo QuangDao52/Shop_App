@@ -1,24 +1,24 @@
 package com.example.shop_app.model;
 
-public class SanPham {
-    private int anh;
+public class Product {
+    private int image;
     private String name;
-    private String gia;
+    private String price;
     private String number;
 
-    public SanPham(int anh, String name, String gia, String number) {
-        this.anh = anh;
+    public Product(int image, String name, String price, String number) {
+        this.image = image;
         this.name = name;
-        this.gia = gia;
+        this.price = price;
         this.number = number;
     }
 
-    public int getAnh() {
-        return anh;
+    public int getImage() {
+        return image;
     }
 
-    public void setAnh(int anh) {
-        this.anh = anh;
+    public void setImage(int image) {
+        this.image = image;
     }
 
     public String getName() {
@@ -29,12 +29,12 @@ public class SanPham {
         this.name = name;
     }
 
-    public String getGia() {
-        return gia;
+    public String getPrice() {
+        return price;
     }
 
-    public void setGia(String gia) {
-        this.gia = gia;
+    public void setPrice(String price) {
+        this.price = price;
     }
 
     public String getNumber() {
@@ -47,10 +47,10 @@ public class SanPham {
 
     @Override
     public String toString() {
-        return "SanPham{" +
-                "anh=" + anh +
+        return "Product{" +
+                "image=" + image +
                 ", name='" + name + '\'' +
-                ", gia='" + gia + '\'' +
+                ", price='" + price + '\'' +
                 ", number='" + number + '\'' +
                 '}';
     }

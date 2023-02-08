@@ -51,7 +51,7 @@
                     android:text="Product Categoies" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcyDanhMuc"
+                    android:id="@+id/rcyCategory"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/dp10"
@@ -86,7 +86,7 @@
 
             </LinearLayout>
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rcySp"
+                android:id="@+id/rcyProduct"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 android:orientation="horizontal"
                 tools:listitem="@layout/item_danhmuc_home"

@@ -12,12 +12,7 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.shop_app.R;
 
 
-/**
- * Drug App
- * https://github.com/quintuslabs/GroceryStore
- * Created on 18-Feb-2019.
- * Created by : Santosh Kumar Dash:- http://santoshdash.epizy.com
- */
+
 public class HomeSliderAdapter extends PagerAdapter {
 
     private Context context;

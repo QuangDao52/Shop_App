@@ -1,20 +1,21 @@
 package com.example.shop_app.model;
 
-public class DanhMuc {
-    private int anh;
+public class Category {
+    private int image;
     private String name;
 
-    public DanhMuc(int anh, String name) {
-        this.anh = anh;
+
+    public Category(int image, String name) {
+        this.image = image;
         this.name = name;
     }
 
-    public int getAnh() {
-        return anh;
+    public int getImage() {
+        return image;
     }
 
-    public void setAnh(int anh) {
-        this.anh = anh;
+    public void setImage(int image) {
+        this.image = image;
     }
 
     public String getName() {
@@ -27,8 +28,8 @@ public class DanhMuc {
 
     @Override
     public String toString() {
-        return "DanhMuc{" +
-                "anh=" + anh +
+        return "Category{" +
+                "image=" + image +
                 ", name='" + name + '\'' +
                 '}';
     }

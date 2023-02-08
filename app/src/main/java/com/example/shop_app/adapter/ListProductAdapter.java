@@ -12,19 +12,19 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.shop_app.R;
-import com.example.shop_app.model.SanPham;
+import com.example.shop_app.model.Product;
 
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class ListSP extends RecyclerView.Adapter<ListSP.ListViewHolder> {
+public class ListProductAdapter extends RecyclerView.Adapter<ListProductAdapter.ListViewHolder> {
     Context context;
-    private List<SanPham> sanPhams;
+    private List<Product> productList;
 
-    public ListSP(Context context, List<SanPham> sanPhams) {
+    public ListProductAdapter(Context context, List<Product> productList) {
         this.context = context;
-        this.sanPhams = sanPhams;
+        this.productList = productList;
     }
 
     @NonNull
@@ -37,25 +37,25 @@ public class ListSP extends RecyclerView.Adapter<ListSP.ListViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
-       SanPham sanPham = sanPhams.get(position);
-        if (sanPham==null){
+       Product product = productList.get(position);
+        if (product==null){
             return;
         }
-        Picasso.get().load(sanPham.getAnh()).into(holder.productImage);
-        holder.txtprice.setText(sanPham.getGia());
-        holder.txtname.setText(sanPham.getName());
-        holder.txtnumber.setText(sanPham.getNumber());
+        Picasso.get().load(product.getImage()).into(holder.productImage);
+        holder.txtprice.setText(product.getPrice());
+        holder.txtname.setText(product.getName());
+        holder.txtnumber.setText(product.getNumber());
     }
 
     @Override
     public int getItemCount() {
-        if(sanPhams!=null){
-            return sanPhams.size();
+        if(productList!=null){
+            return productList.size();
         }
         return 0;
     }
 
-    public class ListViewHolder extends RecyclerView.ViewHolder{
+    public static class ListViewHolder extends RecyclerView.ViewHolder{
         LinearLayout layout;
         ImageView productImage;
         TextView productName_TextView,txtname,txtprice,txtnumber;

@@ -12,19 +12,20 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.shop_app.R;
-import com.example.shop_app.model.DanhMuc;
+import com.example.shop_app.model.Category;
+
 
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class ListDanhMucAdapter extends RecyclerView.Adapter<ListDanhMucAdapter.ListViewHolder> {
+public class ListCategoryAdapter extends RecyclerView.Adapter<ListCategoryAdapter.ListViewHolder> {
     Context context;
-    private List<DanhMuc> danhMucList;
+    private List<Category> categoryList;
 
-    public ListDanhMucAdapter(Context context, List<DanhMuc> danhMucList) {
+    public ListCategoryAdapter(Context context, List<Category> categoryList) {
         this.context = context;
-        this.danhMucList = danhMucList;
+        this.categoryList = categoryList;
     }
 
     @NonNull
@@ -37,23 +38,23 @@ public class ListDanhMucAdapter extends RecyclerView.Adapter<ListDanhMucAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ListViewHolder holder, int position) {
-        DanhMuc danhMuc = danhMucList.get(position);
-        if (danhMuc==null){
+        Category category = categoryList.get(position);
+        if (category==null){
             return;
         }
-        Picasso.get().load(danhMuc.getAnh()).into(holder.productImage);
-        holder.productName_TextView.setText(danhMuc.getName());
+        Picasso.get().load(category.getImage()).into(holder.productImage);
+        holder.productName_TextView.setText(category.getName());
     }
 
     @Override
     public int getItemCount() {
-        if(danhMucList!=null){
-            return danhMucList.size();
+        if(categoryList!=null){
+            return categoryList.size();
         }
         return 0;
     }
 
-    public class ListViewHolder extends RecyclerView.ViewHolder{
+    public static class ListViewHolder extends RecyclerView.ViewHolder{
         LinearLayout layout;
         ImageView productImage;
         TextView productName_TextView;

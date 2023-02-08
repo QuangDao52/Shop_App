@@ -12,16 +12,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.shop_app.R;
-import com.example.shop_app.model.SanPham;
+import com.example.shop_app.model.Product;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class ListSPNew extends RecyclerView.Adapter<ListSPNew.ListViewHolder> {
     Context context;
-    private List<SanPham> sanPhams;
+    private List<Product> sanPhams;
 
-    public ListSPNew(Context context, List<SanPham> sanPhams) {
+    public ListSPNew(Context context, List<Product> sanPhams) {
         this.context = context;
         this.sanPhams = sanPhams;
     }
@@ -36,12 +36,12 @@ public class ListSPNew extends RecyclerView.Adapter<ListSPNew.ListViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ListSPNew.ListViewHolder holder, int position) {
-        SanPham sanPham = sanPhams.get(position);
+        Product sanPham = sanPhams.get(position);
         if (sanPham==null){
             return;
         }
-        Picasso.get().load(sanPham.getAnh()).into(holder.productImage);
-        holder.txtprice.setText(sanPham.getGia());
+        Picasso.get().load(sanPham.getImage()).into(holder.productImage);
+        holder.txtprice.setText(sanPham.getPrice());
         holder.txtname.setText(sanPham.getName());
         holder.txtnumber.setText(sanPham.getNumber());
     }
